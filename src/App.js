@@ -1,9 +1,15 @@
 import React from 'react';
+
 import { Route } from 'react-router-dom'
+
 import { STORE } from './Store'
+
 import Header from './Header';
+
 import Sidebar from './Sidebar';
+
 import Content from './Content';
+
 import './App.css';
 
 export default class App extends React.Component {
@@ -11,7 +17,7 @@ export default class App extends React.Component {
 	state = { ...STORE };
 
 	render() {
-
+		//console.log ( this.state );
 		return (
 
 		<div className="App">
@@ -20,8 +26,8 @@ export default class App extends React.Component {
 			
 			<section>
 
-				<Route path = "/" component = { Sidebar } />
-			
+				<Route render = {(routerProps) => ( <Sidebar folders = { this.state.folders } { ...routerProps } /> ) } />
+
 			</section>
 
 			<Route path = "/" component = { Content } />
