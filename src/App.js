@@ -1,14 +1,35 @@
 import React from 'react';
-import Store from './Store';
+import { Route } from 'react-router-dom'
+import { STORE } from './Store'
+import Header from './Header';
+import Sidebar from './Sidebar';
+import Content from './Content';
 import './App.css';
 
-function App() {
-  const state = { ...Store };
-  return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
-  );
-}
+export default class App extends React.Component {
 
-export default App;
+	state = { ...STORE };
+
+	render() {
+
+		return (
+
+		<div className="App">
+
+			<Header />
+			
+			<section>
+
+				<Route path = "/" component = { Sidebar } />
+			
+			</section>
+
+			<Route path = "/" component = { Content } />
+
+		</div>
+
+		);
+
+	}
+
+}
