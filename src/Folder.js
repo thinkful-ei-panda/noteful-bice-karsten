@@ -5,7 +5,9 @@ import './Folder.css';
 export default class Folder extends React.Component {
 
     render () {
-        console.log ( this.props );
+
+        console.log ( this.props.id );
+
         return (
 
             <div className = "folder-container" id = { this.props.id }>

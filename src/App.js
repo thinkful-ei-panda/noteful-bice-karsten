@@ -17,20 +17,20 @@ export default class App extends React.Component {
 	state = { ...STORE };
 
 	render() {
-		//console.log ( this.state );
+		
 		return (
 
 		<div className="App">
 
 			<Header />
 			
-			<section>
+			<div id = "flex-wrapper">
 
-				<Route render = {(routerProps) => ( <Sidebar folders = { this.state.folders } { ...routerProps } /> ) } />
+				<Route render = { ( routerProps ) => ( <Sidebar folders = { this.state.folders } { ...routerProps } /> ) } />
 
-			</section>
+				<Route path = "/" component = { Content } />
 
-			<Route path = "/" component = { Content } />
+			</div>
 
 		</div>
 

@@ -8,19 +8,17 @@ export default class Sidebar extends React.Component {
 
 	render() {
 
-		console.log ( this.props.folders);
-		
 		return (
 
-			<div className = "Sidebar">
+			<section id = "sidebar-container">
 				
-				{ this.props.folders.forEach ( ( folder, index ) => ( 
+				{ this.props.folders.map ( folder => ( 
 
-					<Folder id = { folder.id } name = { folder.name }  />
+					<Folder key = { folder.id } id = { folder.id } name = { folder.name }  />
 
 				))}
 
-			</div>
+			</section>
 
 		);
 
