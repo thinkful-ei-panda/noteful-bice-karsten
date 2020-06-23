@@ -1,6 +1,7 @@
 .folder {
     margin: 4px;
     background-color: #fff;
+    border-radius: 5px;
     padding: 4px;
     text-align: center;
     color: #000;

@@ -19,6 +19,12 @@ export default class Main extends React.Component {
 
 		        ))}
 
+                <div id="add-note-button-container">
+
+                    <button className = "add-note-button">Add Note</button>
+                    
+                </div>
+
 			</div>		
         );
 

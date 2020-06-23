@@ -14,7 +14,23 @@ export default class Note extends React.Component {
 					
 				<div className = "note-name">
 
-                    { this.props.name }
+                    <h3>
+
+                        { this.props.name }
+
+                    </h3>
+
+				</div>
+
+                <div className = "note-modified">
+
+                    { this.props.modified }
+                    
+				</div>
+
+                <div className = "note-delete">
+
+                    <button value = { this.props.id }>Delete</button>
                     
 				</div>
 

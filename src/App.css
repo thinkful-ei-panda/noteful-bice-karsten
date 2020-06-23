@@ -18,12 +18,13 @@
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 }
 
 #sidebar-container {
 	flex: 1;
+	margin: 8px 0 0 0;
 	text-align: left;
 }
 

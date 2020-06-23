@@ -1,0 +1,15 @@
+#add-note-button-container{
+    margin: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 4px;
+    color: #000;
+    cursor: pointer;
+}
+
+.add-note-button{
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    width: 100%;
+}
