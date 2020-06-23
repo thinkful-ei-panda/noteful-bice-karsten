@@ -1,20 +1,24 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
+import Main from './Main';
 
 import './Content.css';
 
 export default class Content extends React.Component {
 
-	render() {
+	render () {
 
-		return (
+        //console.log ( this.props.notes );
+
+        return (
 
 			<main>
 
-				Content here
+				<Route render = { ( routerProps ) => ( <Main notes = { this.props.notes } { ...routerProps } /> ) } />
 
 			</main>
 
-		);
+        );
 
 	}
 

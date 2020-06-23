@@ -28,7 +28,7 @@ export default class App extends React.Component {
 
 				<Route render = { ( routerProps ) => ( <Sidebar folders = { this.state.folders } { ...routerProps } /> ) } />
 
-				<Route path = "/" component = { Content } />
+				<Route render = { ( routerProps ) => ( <Content notes = { this.state.notes } { ...routerProps } /> ) } />
 
 			</div>
 
